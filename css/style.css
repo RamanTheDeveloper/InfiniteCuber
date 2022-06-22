@@ -1,0 +1,433 @@
+html{
+    scroll-behavior: smooth;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.background-image{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url("/images/homepage/rubiks-cube-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@keyframes fade{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.hero-text{
+    color: #FBFFFF;
+    text-align: center;
+    animation: fade 5s infinite alternate;
+}
+
+.hero-text h1{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+
+.logo{
+    cursor: pointer;
+    width: 145px;
+    height: 76px;
+    position: absolute;
+    top: 5px;
+    left: 5%;
+}
+
+
+/*CSS for Navbar: Start*/
+.navbar{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #000;
+    width: 100%;
+    height: 90px;
+    z-index: 10000;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav li a {
+    margin: 30px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.nav li a:hover {
+    color: #000;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 9px 25px;
+}
+
+
+
+/*Cards container on homepage*/
+.cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:100px 0;
+    width: 100%;
+}
+
+.cards-container .homepage-card{
+    position: relative;
+    width: 320px;
+    height: 370px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                5px 5px 5px rgba(0, 0, 0, 0.05),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.cards-container .homepage-card .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    transition: 0.5s;
+}
+
+.cards-container .homepage-card:hover .box{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #474747, #000000);
+}
+
+.cards-container .homepage-card .box .content{
+    padding: 20px;
+    text-align: center;
+}
+
+.cards-container .homepage-card .box .content i{
+    padding: 0 5px;
+    font-size: 30px;
+}
+
+.cards-container .homepage-card .box .content h3{
+    font-size: 1.3rem;
+}
+
+
+.cards-container .homepage-card .box .content p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.cards-container .homepage-card:hover .box .content h3,
+.cards-container .homepage-card:hover .box .content p{
+    color: #fff;
+}
+
+
+
+/* Learn-container */
+.learn-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column;
+    flex-flow: nowrap;
+    background-color: #000;
+}
+
+.learn-left{
+    padding: 20px;
+}
+
+.learn-right{
+    color: #fff;
+    padding: 10px;
+    width: 500px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.learn-right button{
+    background-color: #fff;
+    border: none;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.learn-right button:hover{
+    background: #474747;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+
+/*Footer*/
+.footer-container{
+    background-color: #000;
+    padding: 3rem 0 0.5rem 0;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.footer{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer-heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer-heading h2{
+    margin-bottom: 2rem;
+}
+
+.footer-heading a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-heading a:hover{
+    color: purple;
+    transition: 0.3s ease-in-out;
+}
+
+.copyright{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+
+.events-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.events-container h2{
+    border-bottom: 2px solid #474747;
+}
+
+.events{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.events-box{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.events-img{
+    width: 200px;
+    height: 200px;
+}
+
+.events-img img{
+    width: 200px;
+    height: 200px;
+}
+
+.events-text{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*************************************************************************************************/
+
+/*Tutorials.html - Event choices*/
+.content img{
+    height: 200px;
+    width: 200px;
+}
+
+.cards-container .homepage-card .box .tutorials-content p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.choice-title{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beginner-method{
+    width: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.choice-title .beginner-method button{
+    background: none;
+    color: #000;
+    width: auto;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid linear-gradient(45deg, #474747, #000000);
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.choice-title .beginner-method button:hover{
+    background: linear-gradient(45deg, #474747, #000000);
+    transition: ease-in-out 0s;
+    color: #fff;
+}
+/*************************************************************************************************/
+
+
+
+/*beginner-3x3.html.html - 3x3 beginners tutorial page*/
+.beginners-method-container{
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+}
+
+.beginners-method-heading{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.beginners-method-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.beginners-method-img{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.beginners-method-img img{
+    height: 200px;
+    width: 230px;
+}
+
+.beginners-method-img .arrow{
+    height: 50px;
+    width: 100px;
+}
+
+.beginners-method-step{
+    height: auto;
+    width: 100%;
+}
+
+.beginners-method-step h2, .beginners-method-step h3, .beginners-method-step h4, .beginners-method-step p{
+    padding: 0 5rem;
+}
+
+.beginners-method-step .beginners-method-step-examples{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.beginners-method-step .beginners-method-step-examples img{
+    height: 200px;
+    width: 230px;
+}
+
+.beginners-method-step .beginners-method-step-examples .arrow{
+    height: 50px;
+    width: 100px;
+}
